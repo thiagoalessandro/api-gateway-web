@@ -9,3 +9,16 @@ eureka:
       defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
   instance:
     preferIpAddress: true
+
+zuul:
+  ignored-services: '*'
+  prefix: /api
+  routes:
+    microserviceMain:
+      path: /microservice/**
+      serviceId: microservice-main
+      strip-prefix: false
+    microserviceSeconf:
+      path: /microserviceSecond/**
+      serviceId: microservice-second
+      strip-prefix: false
