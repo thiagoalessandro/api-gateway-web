@@ -18,7 +18,7 @@ zuul:
       path: /microservice/**
       serviceId: microservice-main
       strip-prefix: false
-    microserviceSeconf:
+    microserviceSecond:
       path: /microserviceSecond/**
       serviceId: microservice-second
       strip-prefix: false
