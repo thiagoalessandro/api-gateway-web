@@ -1,0 +1,16 @@
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+    for (let i = 0; i < 500; i++) {
+        $.ajax({
+            url: "http://localhost:8080/microservice-main/microservice/eurekaClient1",
+            crossDomain: true,
+            success: function (data) {
+                console.log(data);
+            },
+            type: 'GET'
+        });
+    }
+</script>
+</html>
